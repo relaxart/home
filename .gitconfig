@@ -1,0 +1,7 @@
+[user]
+	name = Ilya Isaev
+	email = me@ilyaisaev.com
+[push]
+	default = simple 
+[core]
+	excludesfile = ~/.gitignore_global
