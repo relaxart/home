@@ -86,8 +86,14 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(docker-machine env dev)"
 
+#old should remove
 alias obf="ssh ilyao@devsrv02"
+
+#docker
 alias dr="docker"
 alias drc="docker-compose"
 alias drm="docker-machine"
+alias dbu="drc build && drc up"
+
+#common
 alias res="source ~/.zshrc"
