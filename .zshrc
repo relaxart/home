@@ -91,6 +91,7 @@ alias obf="ssh ilyao@devsrv02"
 
 #docker
 alias dr="docker"
+alias drrm="docker ps -aq | xargs docker rm -f"
 alias drc="docker-compose"
 alias drm="docker-machine"
 alias dbu="drc build && drc up"
