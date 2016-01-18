@@ -97,5 +97,8 @@ alias drccl="docker-compose kill && docker-compose rm -f"
 alias drm="docker-machine"
 alias dbu="drc build && drc up"
 
+#git
+alias gxclean="git reset --hard && git clean -dfx -e .idea"
+
 #common
 alias res="source ~/.zshrc"
