@@ -102,3 +102,6 @@ alias gxclean="git reset --hard && git clean -dfx -e .idea"
 
 #common
 alias res="source ~/.zshrc"
+
+#go
+export GOBIN='.' 
