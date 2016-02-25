@@ -99,6 +99,7 @@ alias dbu="drc build && drc up"
 
 #git
 alias gxclean="git reset --hard && git clean -dfx -e .idea"
+alias ghelp="cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep alias | sed 's/alias //' | sed 's/=/ /' | grep -E '^[A-z\!]+'"
 
 #common
 alias res="source ~/.zshrc"
