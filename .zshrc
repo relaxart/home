@@ -97,6 +97,9 @@ alias drccl="docker-compose kill && docker-compose rm -f"
 alias drm="docker-machine"
 alias dbu="drc build && drc up"
 
+#php
+export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+
 #git
 alias gxclean="git reset --hard && git clean -dfx -e .idea"
 alias ghelp="cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep alias | sed 's/alias //' | sed 's/=/ /' | grep -E '^[A-z\!]+'"
