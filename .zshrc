@@ -90,12 +90,19 @@ eval "$(docker-machine env dev)"
 alias obf="ssh ilyao@devsrv02"
 
 #docker
+function drexec {
+	LINE=${1}p
+	dr exec -it $(drps | awk '{ print $2 }' | sed -n ${LINE}) bash
+}
+
+alias drex="drexec"
 alias dr="docker"
 alias drrm="docker ps -aq | xargs docker rm -f"
 alias drc="docker-compose"
 alias drccl="docker-compose kill && docker-compose rm -f"
 alias drm="docker-machine"
 alias dbu="drc build && drc up"
+alias drps='dr ps --format '\''{{.ID}} {{.Image}}'\'' | nl | awk '\''{ print $1 " "  $2 " " $3 }'\''' 
 
 #php
 export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
