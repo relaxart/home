@@ -92,7 +92,7 @@ alias obf="ssh ilyao@devsrv02"
 #docker
 function drexec {
 	LINE=${1}p
-	dr exec -it $(drps | awk '{ print $2 }' | sed -n ${LINE}) bash
+	docker exec -it $(drps | awk '{ print $2 }' | sed -n ${LINE}) bash
 }
 
 alias drex="drexec"
