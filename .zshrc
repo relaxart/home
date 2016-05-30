@@ -115,4 +115,5 @@ alias ghelp="cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep alias | sed 's/a
 alias res="source ~/.zshrc"
 
 #go
-export GOBIN='.' 
+export GOPATH=$HOME/Projects/go
+export GOBIN=$HOME/Projects/go 
