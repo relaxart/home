@@ -88,8 +88,10 @@ alias dr="docker"
 alias drrm="docker ps -aq | xargs docker rm -f"
 alias drc="docker-compose"
 alias drccl="docker-compose kill && docker-compose rm -f"
-alias dbu="drc build && drc up"
-alias drps='dr ps --format '\''{{.ID}} {{.Image}}'\'' | nl | awk '\''{ print $1 " "  $2 " " $3 }'\''' 
+alias drcup="docker-compose up -d"
+alias drclf="docker-compose logs -f"
+alias dbu="docker-compose build && docker-compose up -d"
+alias drps='docker ps --format '\''{{.ID}} {{.Image}}'\'' | nl | awk '\''{ print $1 " "  $2 " " $3 }'\''' 
 
 #php
 export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
