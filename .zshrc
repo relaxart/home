@@ -103,6 +103,13 @@ alias ghelp="cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep alias | sed 's/a
 #common
 alias res="source ~/.zshrc"
 
+#kubernetes
+kubcon() {
+	kubectl config set-context showroom --namespace=$1
+}
+alias kcn=kubcon
+alias k=kubectl
+
 #go
 export GOPATH=$HOME/Projects/go
 export GOBIN=$HOME/Projects/go 
