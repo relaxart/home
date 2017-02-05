@@ -94,7 +94,7 @@ alias dbu="docker-compose build && docker-compose up -d"
 alias drps='docker ps --format '\''{{.ID}} {{.Image}}'\'' | nl | awk '\''{ print $1 " "  $2 " " $3 }'\''' 
 
 #php
-export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
 
 #git
 alias gxclean="git reset --hard && git clean -dfx -e .idea"
@@ -112,4 +112,5 @@ alias k=kubectl
 
 #go
 export GOPATH=$HOME/Projects/go
-export GOBIN=$HOME/Projects/go 
+export GOBIN=$HOME/Projects/go
+export PATH="$GOBIN:$PATH" 
