@@ -97,7 +97,7 @@ alias drps='docker ps --format '\''{{.ID}} {{.Image}}'\'' | nl | awk '\''{ print
 export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
 
 #git
-alias gxclean="git reset --hard && git clean -dfx -e .idea"
+alias gxclean="git reset --hard && git clean -dffx -e .idea"
 alias ghelp="cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep alias | sed 's/alias //' | sed 's/=/ /' | grep -E '^[A-z\!]+'"
 
 #common
