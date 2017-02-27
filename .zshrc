@@ -84,6 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#sqlite3
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
 alias dr="docker"
 alias drrm="docker ps -aq | xargs docker rm -f"
 alias drc="docker-compose"
