@@ -18,7 +18,7 @@ ZSH_THEME="xiong-chiamiov-plus"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=5
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -84,8 +84,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+### Exports
 #sqlite3
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+#go
+export GOPATH=$HOME/Projects/go
+export GOBIN=$HOME/Projects/go
+export PATH="$GOBIN:$PATH" 
+#php
+export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
 
 alias dr="docker"
 alias drrm="docker ps -aq | xargs docker rm -f"
@@ -96,9 +103,6 @@ alias drclf="docker-compose logs -f"
 alias dbu="docker-compose build && docker-compose up -d"
 alias drps='docker ps --format '\''{{.ID}} {{.Image}}'\'' | nl | awk '\''{ print $1 " "  $2 " " $3 }'\''' 
 
-#php
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
-
 #git
 alias gxclean="git reset --hard && git clean -dffx -e .idea"
 alias ghelp="cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep alias | sed 's/alias //' | sed 's/=/ /' | grep -E '^[A-z\!]+'"
@@ -108,12 +112,8 @@ alias res="source ~/.zshrc"
 
 #kubernetes
 kubcon() {
-	kubectl config set-context showroom --namespace=$1
+	CONTEXT=$(kubectl config get-contexts | grep "*" | awk '{ print $2 }')
+	kubectl config set-context $CONTEXT --namespace=$1
 }
 alias kcn=kubcon
 alias k=kubectl
-
-#go
-export GOPATH=$HOME/Projects/go
-export GOBIN=$HOME/Projects/go
-export PATH="$GOBIN:$PATH" 
