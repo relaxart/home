@@ -120,6 +120,6 @@ passgen() {
 	openssl rand -base64 8
 }
 
-alias pass=passgen
+alias pgen=passgen
 alias kcn=kubcon
 alias k=kubectl
