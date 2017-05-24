@@ -115,5 +115,11 @@ kubcon() {
 	CONTEXT=$(kubectl config get-contexts | grep "*" | awk '{ print $2 }')
 	kubectl config set-context $CONTEXT --namespace=$1
 }
+
+passgen() {
+	openssl rand -base64 8
+}
+
+alias pass=passgen
 alias kcn=kubcon
 alias k=kubectl
