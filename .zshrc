@@ -109,6 +109,7 @@ alias ghelp="cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep alias | sed 's/a
 
 #common
 alias res="source ~/.zshrc"
+alias watch='watch '
 
 #kubernetes
 kubcon() {
@@ -123,3 +124,4 @@ passgen() {
 alias pgen=passgen
 alias kcn=kubcon
 alias k=kubectl
+
