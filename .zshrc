@@ -117,6 +117,13 @@ kubcon() {
 	kubectl config set-context $CONTEXT --namespace=$1
 }
 
+#clean cache for MacOS calendar
+icalcl() {
+	rm /Users/ilya.isaevolegovich/Library/Calendars/Calendar\ Cache
+	rm /Users/ilya.isaevolegovich/Library/Calendars/Calendar\ Cache-shm
+	rm /Users/ilya.isaevolegovich/Library/Calendars/Calendar\ Cache-wal
+}
+
 passgen() {
 	openssl rand -base64 8
 }
