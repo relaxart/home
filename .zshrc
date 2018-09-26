@@ -91,8 +91,6 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export GOPATH=$HOME/Projects/go
 export GOBIN=$HOME/Projects/go
 export PATH="$GOBIN:$PATH" 
-#php
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
 
 alias dr="docker"
 alias drrm="docker ps -aq | xargs docker rm -f"
