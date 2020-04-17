@@ -119,6 +119,7 @@ passgen() {
 	openssl rand -base64 8
 }
 
+alias t=terraform
 alias pgen=passgen
 alias kcn=kubcon
 alias k=kubectl
