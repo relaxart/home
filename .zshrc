@@ -85,8 +85,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ### Exports
-#sqlite3
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
 #go
 export GOPATH=$HOME/Projects/go
 export GOBIN=$HOME/Projects/go
@@ -118,6 +116,8 @@ kubcon() {
 passgen() {
 	openssl rand -base64 8
 }
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 alias t=terraform
 alias pgen=passgen
