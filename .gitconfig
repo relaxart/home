@@ -5,6 +5,7 @@
 	default = simple 
 [core]
 	excludesfile = ~/.gitignore_global
+	autocrlf = input
 [diff "sopsdiffer"]
 	textconv = sops -d
 [pull]
