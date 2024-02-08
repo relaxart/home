@@ -123,3 +123,4 @@ alias t=terraform
 alias pgen=passgen
 alias kcn=kubcon
 alias k=kubectl
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
