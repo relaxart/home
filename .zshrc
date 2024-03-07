@@ -124,3 +124,5 @@ alias pgen=passgen
 alias kcn=kubcon
 alias k=kubectl
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="/opt/homebrew/Caskroom/flutter/3.13.2/flutter/bin:$PATH"
+
