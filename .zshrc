@@ -119,6 +119,7 @@ passgen() {
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+alias python=python3
 alias t=terraform
 alias pgen=passgen
 alias kcn=kubcon
