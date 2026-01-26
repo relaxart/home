@@ -127,3 +127,8 @@ alias k=kubectl
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="/opt/homebrew/Caskroom/flutter/3.29.2/flutter/bin:/opt/homebrew/Caskroom/flutter/3.29.2/flutter/bin/cache/dart-sdk/bin:$PATH"
 
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/relaxart/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
