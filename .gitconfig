@@ -10,3 +10,5 @@
 	textconv = sops -d
 [pull]
 	rebase = true
+[init]
+	defaultBranch = main
