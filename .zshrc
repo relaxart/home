@@ -136,3 +136,7 @@ compinit
 # Added by Antigravity
 export PATH="/Users/relaxart/.antigravity/antigravity/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/relaxart/.local/bin:$PATH"
